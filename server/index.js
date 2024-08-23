@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require("mongoose");
 const path = require('path');
+const dotenv = require("dotenv").config();
 
 const userController = require('./controllers/user');
 const driController = require('./controllers/dri');
@@ -9,7 +10,8 @@ const foodController = require('./controllers/food');
 const updateController = require('./controllers/update');
 const friendController = require('./controllers/friend');
 
-const app = express();
+const app = express()
+
 const port = process.env.PORT || 3000;
  
 //need to create an envrionment variable with: export DATABASEURL=<url to database>
