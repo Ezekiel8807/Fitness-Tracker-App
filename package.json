@@ -4,7 +4,8 @@
   "description": "Exercise and Food Intake App",
   "main": "index.js",
   "scripts": {
-    "start": "node server/index.js",
+    "start": "npm install && node server/index.js",
+    "build": "cd client && npm install && vue-cli-service build",
     "dev": "nodemon server/index.js"
   },
   "dependencies": {
