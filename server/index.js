@@ -1,6 +1,6 @@
-const express = require('express');
+const express = require("express");
 const mongoose = require("mongoose");
-const path = require('path');
+const path = require("path");
 const dotenv = require("dotenv").config();
 
 const userController = require('./controllers/user');
@@ -17,9 +17,9 @@ const port = process.env.PORT || 3000;
 //need to create an envrionment variable with: export DATABASEURL=<url to database>
 // to check if worked:  
 // console.log(process.env.DATABASEURL);
-mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(console.log("Healthy Habits Database Connected!"))
-    .catch(error => console.log(error));
+// mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true, useUnifiedTopology: true })
+//     .then(console.log("Healthy Habits Database Connected!"))
+//     .catch(error => console.log(error));
 
 //CORS middleware
 app.use(function(req, res, next) {
